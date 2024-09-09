@@ -1,6 +1,8 @@
 package com.example.assignmenttwo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,25 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+    /**
+     * Implementing a click event for the about us content
+     * Starts the GameActivity with the content from the  at index 0
+     * @param v the view that is clicked
+     */
+    public void onClickGame(View v){
+        Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra("index", 0);
+        startActivity(intent);
+    }
+    /**
+     * Implementing a click event for the Leaderboard content
+     * Starts the Leaderboard_Activity with the content from LeaderBoard at index 1
+     * @param v the view that is clicked
+     */
+    public void onClickLeaderBoard(View v){
+        Intent intent = new Intent(this, Leaderboard_Activity.class);
+        intent.putExtra("index", 0);
+        startActivity(intent);
+    }
+
 }
