@@ -18,8 +18,10 @@ public class GameActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game);
     }
-
-
+    private GamePlay gamePlay;
+    public void startGame(){
+        GamePlay.startGame();
+    }
     /**
      * Implementing a click event for the PlayerActivity content
      * Starts the GameActivity with the content from the PlayerActivity at index 0
