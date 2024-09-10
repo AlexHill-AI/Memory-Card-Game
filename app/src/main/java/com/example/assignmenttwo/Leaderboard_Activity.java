@@ -22,12 +22,7 @@ public class Leaderboard_Activity extends AppCompatActivity {
 
     private static Leaderboard leaderBoardInstance = null;
 
-    public static Leaderboard getInstance() {
-        if (leaderBoardInstance == null) {
-            leaderBoardInstance = new Leaderboard();
-        }
-        return leaderBoardInstance;
-    }
+
 
 
 }

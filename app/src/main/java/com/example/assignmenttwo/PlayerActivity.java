@@ -18,6 +18,8 @@ public class PlayerActivity extends AppCompatActivity {
     private int playerScore;
     private int avatatID;
     private String playerName;
+    private Intent intent;
+    private Leaderboard leardboardInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,11 @@ public class PlayerActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_players);
 
+    }
+
+    public void onClickSubmit(View v){
+        Intent intent = new Intent(this, Leaderboard.class);
+        startActivity(intent);
     }
 
 }
