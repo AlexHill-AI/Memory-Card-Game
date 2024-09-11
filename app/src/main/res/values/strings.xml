@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AssignmentTwo</string>
+    <string name="app_name">Memory</string>
+
+    <!-- Views set up for implementing text -->
+    <!-- <string name="tv_playerscore">Player score: </string>
+    <string name="tv_decription">This is the content</string>-->
+
 </resources>

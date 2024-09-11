@@ -4,27 +4,39 @@ package com.example.assignmenttwo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
-
 public class GameActivity extends AppCompatActivity {
+
+    private GamePlay gamePlay;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game);
+
+        // Initialize the gamePlay instance with the current context
+        gamePlay = new GamePlay(this);
+        // Start the game when the activity is created
+        startGame();
     }
-    private GamePlay gamePlay;
+    Intent intent = getIntent();
+
+    /**
+     *
+     */
     public void startGame(){
-        GamePlay.startGame();
+        gamePlay.startGame();
     }
+
     /**
      * Implementing a click event for the PlayerActivity content
-     * Starts the GameActivity with the content from the PlayerActivity at index 0
+     * Starts the GameActivity
      * @param v the view that is clicked
      */
     public void onClickGame(View v){
