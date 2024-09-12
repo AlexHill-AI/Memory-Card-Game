@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="front_array_cards">
-        <item>img_card_front_artist</item>
-        <item>img_card_front_astronaut</item>
-        <item>img_card_front_coder</item>
-        <item>img_card_front_doctor</item>
-        <item>img_card_front_police</item>
-        <item>img_card_front_scientist</item>
-        <item>img_card_front_welder</item>
-    </string-array>
-
-    <string-array name="rg_avatar">
-        <item>img_card_front_coder</item>
-        <item>img_card_front_artist</item>
-        <item>img_card_front_astronaut</item>
-        <item>img_card_front_doctor</item>
-        <item>img_card_front_scientist</item>
-    </string-array>
 </resources>

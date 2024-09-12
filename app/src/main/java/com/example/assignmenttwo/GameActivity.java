@@ -1,6 +1,7 @@
 package com.example.assignmenttwo;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,17 +14,16 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GameActivity extends AppCompatActivity {
 
     private GamePlay gamePlay;
-
+    // Initialize the gamePlay instance with the current context
+    Context conGameActivity = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game);
 
-        // Initialize the gamePlay instance with the current context
-        gamePlay = new GamePlay(this);
-        // Start the game when the activity is created
-        startGame();
+
+
     }
     Intent intent = getIntent();
 
@@ -31,7 +31,8 @@ public class GameActivity extends AppCompatActivity {
      *
      */
     public void startGame(){
-        gamePlay.startGame();
+        gamePlay = new GamePlay(conGameActivity);
+        gamePlay.setUpGame();
     }
 
     /**

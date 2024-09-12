@@ -1,14 +1,49 @@
 package com.example.assignmenttwo;
 
+import android.content.Context;
+
 public class Leaderboard {
 
+    private Leaderboard leaderBoardInstance;
 
-    private static Leaderboard leaderBoardInstance = null;
+    /**
+     * Singleton instance of the leaderboard, only allowing for one to ever be created
+     */
+    private Leaderboard(){
 
-    public static Leaderboard getInstance() {
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Leaderboard getInstance() {
         if (leaderBoardInstance == null) {
             leaderBoardInstance = new Leaderboard();
         }
         return leaderBoardInstance;
+    }
+
+    /**
+     *
+     */
+    public int[] getImageArray() {
+        return getImageArray();
+    }
+
+    /**
+     *
+     * @param currentPlayer
+     */
+    public void updateLeaderboard(Player currentPlayer){
+
+    }
+
+    /**
+     *
+     * @param context
+     */
+    public void displayLeaderboard(Context context){
+
     }
 }

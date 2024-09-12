@@ -9,6 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+//private Leaderboard leaderBoardInstance = null;
 
 
 public class Leaderboard_Activity extends AppCompatActivity {
@@ -23,7 +24,6 @@ public class Leaderboard_Activity extends AppCompatActivity {
 
 
 
-    private static Leaderboard leaderBoardInstance = null;
 
 
 

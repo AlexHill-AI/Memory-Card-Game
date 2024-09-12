@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class PlayerActivity extends AppCompatActivity {
 
     private int playerScore;
-    private int avatatID;
+    private int avatarID;
     private String playerName;
     private Intent intent;
     private Leaderboard leardboardInstance;

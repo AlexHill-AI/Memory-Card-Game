@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Memory</string>
 
-    <!-- Views set up for implementing text -->
-    <!-- <string name="tv_playerscore">Player score: </string>
-    <string name="tv_decription">This is the content</string>-->
+    <string name="artist">artist</string>
+    <string name="coder">coder</string>
+    <string name="doctor">coder</string>
+    <string name="police">coder</string>
+    <string name="welder">coder</string>
+    <string name="scientist">coder</string>
+    <string name="astronut">coder</string>
 
 </resources>
