@@ -14,16 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GameActivity extends AppCompatActivity {
 
     private GamePlay gamePlay;
+
     // Initialize the gamePlay instance with the current context
-    Context conGameActivity = this;
+    Context contextGameActivity = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game);
-
-
-
+        startGame();
     }
     Intent intent = getIntent();
 
@@ -31,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
      *
      */
     public void startGame(){
-        gamePlay = new GamePlay(conGameActivity);
+        gamePlay = new GamePlay(contextGameActivity);
         gamePlay.setUpGame();
     }
 

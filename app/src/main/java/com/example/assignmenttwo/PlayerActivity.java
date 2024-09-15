@@ -24,9 +24,9 @@ public class PlayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_players);
-
+        Intent intent = getIntent();
     }
 
     public void onClickSubmit(View v){

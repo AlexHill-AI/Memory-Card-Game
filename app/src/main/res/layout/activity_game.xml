@@ -22,7 +22,7 @@
             android:paddingTop="20dp"/>
 
         <TextView
-            android:id="@+id/textviewGuesses"
+            android:id="@+id/tv_num_guesses"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -86,7 +86,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="0"/>
+            android:tag="3"/>
 
         <ImageView
             android:id="@+id/iv_card_4"
@@ -96,7 +96,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="1"/>
+            android:tag="4"/>
 
         <ImageView
             android:id="@+id/iv_card_5"
@@ -106,7 +106,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="2"/>
+            android:tag="5"/>
 
 
     </LinearLayout>
@@ -125,7 +125,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="0"/>
+            android:tag="6"/>
 
         <ImageView
             android:id="@+id/iv_card_7"
@@ -135,7 +135,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="1"/>
+            android:tag="7"/>
 
         <ImageView
             android:id="@+id/iv_card_8"
@@ -145,7 +145,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="2"/>
+            android:tag="8"/>
 
     </LinearLayout>
 
@@ -164,7 +164,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="0"/>
+            android:tag="9"/>
 
         <ImageView
             android:id="@+id/iv_card_10"
@@ -174,7 +174,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="1"/>
+            android:tag="10"/>
 
         <ImageView
             android:id="@+id/iv_card_11"
@@ -184,7 +184,7 @@
             android:padding="2dp"
             android:scaleType="centerInside"
             android:src="@drawable/img_card_back"
-            android:tag="2"/>
+            android:tag="11"/>
 
     </LinearLayout>
 

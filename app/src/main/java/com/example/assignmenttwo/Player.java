@@ -30,7 +30,7 @@ public class Player {
     }
 
     /**
-     *
+     * 
      * @return
      */
     public Drawable getPlayerAvatar(){

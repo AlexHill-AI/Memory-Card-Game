@@ -68,9 +68,9 @@ public class Card {
      *
      * @return
      */
-    public boolean setFaceUp(){
-        isFaceUp = true;
-        return isFaceUp;
+    public boolean setFaceUp(boolean faceUp){
+        this.isFaceUp = faceUp;
+        return faceUp;
     }
 
     /**
