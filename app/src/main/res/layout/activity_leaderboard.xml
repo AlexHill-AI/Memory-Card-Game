@@ -61,8 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Player Name"/>
+                android:padding="10dp" />
 
             <!-- Score TextView -->
             <TextView
@@ -71,8 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Score"/>
+                android:padding="10dp" />
 
         </LinearLayout>
 
@@ -102,8 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Player Name"/>
+                android:padding="10dp" />
 
             <!-- Score TextView -->
             <TextView
@@ -112,8 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Score"/>
+                android:padding="10dp" />
 
         </LinearLayout>
         <LinearLayout
@@ -142,8 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Player Name"/>
+                android:padding="10dp" />
 
             <!-- Score TextView -->
             <TextView
@@ -152,8 +147,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Score"/>
+                android:padding="10dp" />
 
         </LinearLayout>
         <LinearLayout
@@ -182,8 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Player Name"/>
+                android:padding="10dp" />
 
             <!-- Score TextView -->
             <TextView
@@ -192,8 +185,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Score"/>
+                android:padding="10dp" />
 
         </LinearLayout>
 
@@ -223,8 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Player Name"/>
+                android:padding="10dp" />
 
             <!-- Score TextView -->
             <TextView
@@ -233,8 +224,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:padding="10dp"
-                android:text="Score"/>
+                android:padding="10dp" />
 
         </LinearLayout>
 

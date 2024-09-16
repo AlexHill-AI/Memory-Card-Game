@@ -34,6 +34,7 @@ public class GamePlay{
     }
 
     /**
+     * This method sets up the game to be reset everytime it is run
      *
      */
     public void setUpGame() {
@@ -45,6 +46,7 @@ public class GamePlay{
         cardFirst = null;
         cardSecond = null;
 
+        //Adding cards to cardTypes
         cardTypes.add("coder");
         cardTypes.add("coder");
         cardTypes.add("doctor");
@@ -60,6 +62,7 @@ public class GamePlay{
 
         Collections.shuffle(cardTypes);
 
+        //Creating 12 cards and assigning the front and back images
         for(int i = 0; i < 12; i++){
             String cardType = cardTypes.get(i);
             String cardFront = "img_card_front_" + cardType;
@@ -72,7 +75,8 @@ public class GamePlay{
     }
 
     /**
-     *
+     * This method sets up the images with the cards
+     * Getting the cards and assigning IDs from the layout to them
      */
     public void setupImageViewsAndOnClicks() {
         //Add in a loop for the 12 cards
@@ -82,7 +86,7 @@ public class GamePlay{
             // Get the resource ID using the generated string
             int resourceId = context.getResources().getIdentifier(cardID, "id", context.getPackageName());
 
-            //Grab the imageview id with this  ((Activity)context).findViewById(R.id.id_name)
+            //Grab the imageview id
             ImageView imageView = ((Activity)context).findViewById(resourceId);
 
             card.setImageviewCard(imageView);
@@ -103,7 +107,7 @@ public class GamePlay{
 
     /**
      * Turn the card over if it is face down
-     * @param card
+     * @param card, the card that is going to be flipped
      */
     public void displayCardsFaceUp(Card card) {
 
@@ -124,7 +128,7 @@ public class GamePlay{
 
     /**
      * Turn the card over if it is face up
-     * @param card
+     * @param card, the cards that is going to be displayed
      */
     public void displayCardsFaceDown(Card card) {
         //if cards are face up make them face down
@@ -143,28 +147,32 @@ public class GamePlay{
     }
 
     /**
-     *
+     * Checks if 2 cards are a match then displays them
      */
     public void displayCards() {
         checkCardMatch();
     }
 
     /**
-     *
+     * Assigns variables to the first and second cards
+     * then displays turns them face up
      * @param card
      */
     public void flipCard(Card card) {
+        //If the card is face up, do nothing
         if (card.isFaceUp()) {
             return;
         }
+        //Assigning the first card to a variable then flipping it
         if (cardFirst == null) {
             cardFirst = card;
             displayCardsFaceUp(cardFirst);
-
+        //Assigning the second card to a variable then flipping it
         } else if (cardSecond == null) {
             cardSecond = card;
             displayCardsFaceUp(cardSecond);
 
+            //Creates a delay of 1 second after 2 cards have been flipped
             final Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
 
@@ -179,7 +187,8 @@ public class GamePlay{
 
 
     /**
-     * When a card is clicked it will flip the cards
+     * When a card is clicked it will get the tage associated with it,
+     * then flip the card
      */
     public void onclickCard(View view) {
         // Retrieve the Card object based on the tag
@@ -188,12 +197,11 @@ public class GamePlay{
     }
 
     /**
-     * If the cards dont have values do nothing,
-     * otherwise if 2 cards match add to the point counter,
-     * ends the game if all have been found,
-     * then updates the guess counter
+     * This method checks if cards are a match by checking the cardType,
+     * If no matches are found end the game and flip the non matched cards back over
      */
     public void checkCardMatch() {
+        //If the first or second card are not flipped, do nothing
         if(cardFirst == null || cardSecond == null){
             return;
         }

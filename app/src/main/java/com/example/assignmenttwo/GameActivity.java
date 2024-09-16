@@ -17,6 +17,7 @@ public class GameActivity extends AppCompatActivity {
 
     // Initialize the gamePlay instance with the current context
     Context contextGameActivity = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,7 @@ public class GameActivity extends AppCompatActivity {
     Intent intent = getIntent();
 
     /**
-     *
+     * Starts the game
      */
     public void startGame(){
         gamePlay = new GamePlay(contextGameActivity);
