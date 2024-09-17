@@ -58,7 +58,6 @@ public class PlayerActivity extends AppCompatActivity {
                     return;
                 }
                 int[] imageArray = Leaderboard.getInstance().getImageArray();
-
                 avatarID = imageArray[tagIndex];
             }
         });
@@ -70,36 +69,25 @@ public class PlayerActivity extends AppCompatActivity {
      */
     public void onClickSubmit(View v){
 
-        Intent intent = new Intent(this, Leaderboard_Activity.class);
+
         //Gets the player name from the edit text
         EditText name = findViewById(R.id.et_playername);
         playerName = name.getText().toString();
 
-        //Getting the image from the radio group
-//        RadioGroup radio = findViewById(R.id.rg_avatar);
-//        int checkChoice = radio.getCheckedRadioButtonId();
 
-//        //if a button is not clicked do nothing
-//        if(checkChoice == -1){
-//            return;
-//        }
-
-//        RadioButton radioChoice = findViewById(checkChoice);
-//
-//
-//        avatarID = Integer.parseInt(radioChoice.getTag().toString());
+        //avatarID = Integer.parseInt(radioChoice.getTag().toString());
 
 
-        Drawable drawable = getResources().getDrawable(Leaderboard.getImageArray()[avatarID]);
+
 
         Player currentPlayer = new Player(this, playerName, avatarID, playerScore);
 
 
-        //Leaderboard.getInstance().updateLeaderboard(currentPlayer);
-        //Leaderboard.getInstance().displayLeaderboard(this);
+        Leaderboard.getInstance().updateLeaderboard(currentPlayer);
+
 
         //Changed to the leaderboard activity when selected
-
+        Intent intent = new Intent(this, Leaderboard_Activity.class);
 //        intent.putExtra("Name", playerName);
 //        intent.putExtra("", avatarID);
 //        intent.putExtra("", playerScore);

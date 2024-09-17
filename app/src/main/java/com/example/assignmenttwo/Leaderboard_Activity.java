@@ -26,7 +26,7 @@ public class Leaderboard_Activity extends AppCompatActivity {
         //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_leaderboard);
 
-        //leaderboardInstance.displayLeaderboard(contextLeaderboardActivity);
+        leaderboardInstance.displayLeaderboard(contextLeaderboardActivity);
     }
 
 

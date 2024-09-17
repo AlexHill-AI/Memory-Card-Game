@@ -62,27 +62,49 @@ public class Leaderboard {
      * @param context
      */
     public void displayLeaderboard(Context context){
-        // Add a loop for 5 players
-//        for (int i = 0; i < 5; i++) {
-//            Player player = leaderboard.get(i);
-//
-//            String playerName = player.getPlayerName();
-//            Drawable playerAvatar = player.getPlayerAvatar();
-//            int playerScore = player.getPlayerScore();
-//
-//
-//            int nameResId = context.getResources().getIdentifier("tv_leaderboard_name" + i, "id", context.getPackageName());
-//            int avatarResId = context.getResources().getIdentifier("tv_leaderboard_score" + i, "id", context.getPackageName());
-//            int scoreResId = context.getResources().getIdentifier("iv_leaderboard_avatar" + i, "id", context.getPackageName());
-//
-//            TextView nameV = ((Activity) context).findViewById(nameResId);
-//            ImageView avatarV = ((Activity) context).findViewById(avatarResId);
-//            TextView scoreV = ((Activity) context).findViewById(scoreResId);
-//
-//            nameV.setText(playerName);
-//            avatarV.setImageDrawable(playerAvatar);
-//            scoreV.setText(String.valueOf(playerScore));
-//        }
 
+
+        //Getting the player name and linking it to the textview
+        TextView nameV1 = ((Activity) context).findViewById(R.id.tv_leaderboard_name1);
+        TextView nameV2 = ((Activity) context).findViewById(R.id.tv_leaderboard_name2);
+        TextView nameV3 = ((Activity) context).findViewById(R.id.tv_leaderboard_name3);
+        TextView nameV4 = ((Activity) context).findViewById(R.id.tv_leaderboard_name4);
+        TextView nameV5 = ((Activity) context).findViewById(R.id.tv_leaderboard_name5);
+
+        int[] playerName = new int[5];
+        TextView[] nameViews = new TextView[]{nameV1, nameV2, nameV3, nameV4, nameV5};
+
+        //Loop through and assign the variables
+        for (int i = 0; i < leaderboard.size(); i++) {
+            nameViews[i].setText(leaderboard.get(i));
+        }
+
+        ImageView avatarV1 = ((Activity) context).findViewById(R.id.iv_leaderboard_avatar1);
+        ImageView avatarV2 = ((Activity) context).findViewById(R.id.iv_leaderboard_avatar2);
+        ImageView avatarV3 = ((Activity) context).findViewById(R.id.iv_leaderboard_avatar3);
+        ImageView avatarV4 = ((Activity) context).findViewById(R.id.iv_leaderboard_avatar4);
+        ImageView avatarV5 = ((Activity) context).findViewById(R.id.iv_leaderboard_avatar5);
+
+        int[] avatarID = new int[5];
+        ImageView[] avatarViews = new ImageView[]{avatarV1, avatarV2, avatarV3, avatarV4, avatarV5};
+
+        //Loop through and assign the variables
+        for (int i = 0; i < leaderboard.size(); i++) {
+
+        }
+
+        TextView scoreV1 = ((Activity) context).findViewById(R.id.tv_leaderboard_score1);
+        TextView scoreV2 = ((Activity) context).findViewById(R.id.tv_leaderboard_score2);
+        TextView scoreV3 = ((Activity) context).findViewById(R.id.tv_leaderboard_score3);
+        TextView scoreV4 = ((Activity) context).findViewById(R.id.tv_leaderboard_score4);
+        TextView scoreV5 = ((Activity) context).findViewById(R.id.tv_leaderboard_score5);
+
+        int[] playerScore = new int[5];
+        TextView[] scoreViews = new TextView[]{scoreV1, scoreV2, scoreV3, scoreV4, scoreV5};
+
+        //Loop through and assign the variables
+        for (int i = 0; i < leaderboard.size(); i++) {
+
+        }
     }
 }
