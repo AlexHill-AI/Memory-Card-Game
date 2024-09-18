@@ -39,28 +39,11 @@ public class PlayerActivity extends AppCompatActivity {
         TextView tvScore = findViewById(R.id.tv_playerscore);
 
         //Getting the totalGuess passed from gameplay
-        Intent intent = getIntent();
+        intent = getIntent();
         playerScore = intent.getIntExtra("Guesses", -1);
         //Set the score to the new text view
         tvScore.setText("Your Score: " + playerScore);
 
-        RadioGroup avatar = (RadioGroup) findViewById(R.id.rg_avatar);
-        avatar.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int tag) {
-
-                RadioButton selected = findViewById(tag);
-
-                int tagIndex = Integer.parseInt(selected.getTag().toString());
-
-                //if a button is not clicked do nothing
-                if(tagIndex == -1){
-                    return;
-                }
-                int[] imageArray = Leaderboard.getInstance().getImageArray();
-                avatarID = imageArray[tagIndex];
-            }
-        });
     }
 
     /**
@@ -68,29 +51,32 @@ public class PlayerActivity extends AppCompatActivity {
      * @param v
      */
     public void onClickSubmit(View v){
-
-
         //Gets the player name from the edit text
         EditText name = findViewById(R.id.et_playername);
         playerName = name.getText().toString();
 
+        // Get the selected avatar from the RadioGroup
+        RadioGroup avatar = findViewById(R.id.rg_avatar);
+        int selectedId = avatar.getCheckedRadioButtonId();
 
-        //avatarID = Integer.parseInt(radioChoice.getTag().toString());
+        //Do nothing if no button is selected
+        if (selectedId == -1) {
+            return;
+        }
 
+        RadioButton selected = findViewById(selectedId);
+        int tagIndex = Integer.valueOf(selected.getTag().toString());
 
-
+        // Use the tag to get the avatar ID from the array
+        // Use the tag to get the avatar ID from the array
+        avatarID = Integer.valueOf(selected.getTag().toString());
 
         Player currentPlayer = new Player(this, playerName, avatarID, playerScore);
 
-
-        Leaderboard.getInstance().updateLeaderboard(currentPlayer);
-
+        leaderboardInstance.updateLeaderboard(currentPlayer);
 
         //Changed to the leaderboard activity when selected
         Intent intent = new Intent(this, Leaderboard_Activity.class);
-//        intent.putExtra("Name", playerName);
-//        intent.putExtra("", avatarID);
-//        intent.putExtra("", playerScore);
         startActivity(intent);
     }
 

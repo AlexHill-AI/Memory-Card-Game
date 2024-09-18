@@ -13,16 +13,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button game_Button;
-    Button leaderboard_button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        Button button = findViewById(R.id.game_Button);
-        Button button2 = findViewById(R.id.leaderboard_button);
     }
     /**
      * Implementing a click event for the about us content
@@ -30,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
      * @param v the view that is clicked
      */
     public void onClickGame(View v){
-        Intent intent = new Intent(MainActivity.this, GameActivity.class);
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
     /**

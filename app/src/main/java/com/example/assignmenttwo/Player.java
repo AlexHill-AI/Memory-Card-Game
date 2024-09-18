@@ -17,7 +17,7 @@ public class Player {
      */
     public Player(Context context, String name, int avatarID, int score){
         playerName = name;
-        playerAvatar = context.getResources().getDrawable((Leaderboard.getImageArray()[avatarID]),context.getTheme());
+        playerAvatar = context.getResources().getDrawable((Leaderboard.getInstance().getImageArray()[avatarID]),context.getTheme());
         playerScore = score;
     }
 

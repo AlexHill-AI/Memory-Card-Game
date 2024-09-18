@@ -43,7 +43,7 @@
 
     </LinearLayout>
 
-    <!-- Avatar Color Section -->
+    <!-- Avatar Image Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,15 +52,15 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
 
-        <!-- TextView for Avatar Color -->
+        <!-- TextView for Avatar Image -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/purple"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:text="Avatar Colour"/>
+            android:text="Avatar Choices"/>
 
-        <!-- RadioGroup for Avatar Color Choices -->
+        <!-- RadioGroup for Avatar Image Choices -->
         <RadioGroup
             android:id="@+id/rg_avatar"
             android:layout_width="match_parent"
