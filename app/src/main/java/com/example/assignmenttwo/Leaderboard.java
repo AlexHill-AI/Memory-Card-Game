@@ -9,29 +9,36 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * The leaderboard class manages the players and their details
+ * It uses the singleton instance so that only one instance of the leaderboard is made
+ */
 public class Leaderboard {
 
+    //Singleton instance of the leaderboard
     private static Leaderboard leaderBoardInstance = null;
 
     private static int[] IMG_ARRAY = new int[5];
     private ArrayList<Player> leaderboard = new ArrayList<>();
 
     /**
-     * Singleton instance of the leaderboard, only allowing for one to ever be created
+     * This method is the leaderboard constructor that
      */
     private Leaderboard(){
+        //Setting the images to the img_array
        IMG_ARRAY[0] = R.drawable.img_card_front_coder;
-       IMG_ARRAY[1] =  R.drawable.img_card_front_artist;
+       IMG_ARRAY[1] = R.drawable.img_card_front_artist;
        IMG_ARRAY[2] = R.drawable.img_card_front_astronaut;
        IMG_ARRAY[3] = R.drawable.img_card_front_doctor;
        IMG_ARRAY[4] = R.drawable.img_card_front_scientist;
     }
 
     /**
-     *
-     * @return the instance of the leaderboard
+     * This method returns the singleton instance of the leaderboard
+     * @return the singleton instance of the leaderboard
      */
     public static Leaderboard getInstance() {
+       //Creates a new leaderboard if one doesn't exist
         if (leaderBoardInstance == null) {
             leaderBoardInstance = new Leaderboard();
         }
@@ -39,7 +46,7 @@ public class Leaderboard {
     }
 
     /**
-     *
+     * This method is used to return the image array
      * @return Returns the image array
      */
     public static int[] getImageArray() {
@@ -48,7 +55,7 @@ public class Leaderboard {
 
     /**
      * Adds players to the leaderboard
-     * @param currentPlayer the most recent player who will be added to the leaderboard
+     * @param currentPlayer the most recent player that will be added to the leaderboard
      */
     public void updateLeaderboard(Player currentPlayer){
         if(currentPlayer != null){
@@ -57,8 +64,9 @@ public class Leaderboard {
     }
 
     /**
-     *
-     * @param context
+     * This method will display the updated player details into the textviews and imageviews
+     * in the leaderboard context
+     * @param context, the current context of the application
      */
     public void displayLeaderboard(Context context){
         // Getting the player name and linking it to the textviews
@@ -70,7 +78,7 @@ public class Leaderboard {
                 ((Activity) context).findViewById(R.id.tv_leaderboard_name5)
         };
 
-//        // Getting the player avatars and linking them to imageviews
+        // Getting the player avatars and linking them to imageviews
         ImageView[] avatarViews = new ImageView[]{
                 ((Activity) context).findViewById(R.id.iv_leaderboard_avatar1),
                 ((Activity) context).findViewById(R.id.iv_leaderboard_avatar2),

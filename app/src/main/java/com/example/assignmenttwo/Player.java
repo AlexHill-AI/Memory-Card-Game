@@ -3,17 +3,20 @@ package com.example.assignmenttwo;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
+/**
+ * The player class to hold the players information
+ */
 public class Player {
     private String playerName;
     private Drawable playerAvatar;
     private int playerScore;
 
     /**
-     *
-     * @param context
-     * @param name
-     * @param avatarID
-     * @param score
+     * Initialising the player constructor
+     * @param context, the context of the current application state
+     * @param name, the name of the player
+     * @param avatarID, the image the player will select
+     * @param score, the players score
      */
     public Player(Context context, String name, int avatarID, int score){
         playerName = name;
@@ -22,24 +25,24 @@ public class Player {
     }
 
     /**
-     *
-     * @return
+     * This method will return the players name
+     * @return the name of the player
      */
     public String getPlayerName(){
         return playerName;
     }
 
     /**
-     * 
-     * @return
+     * This method will return the players avatar
+     * @return the avatar of the player
      */
     public Drawable getPlayerAvatar(){
         return playerAvatar;
     }
 
     /**
-     *
-     * @return
+     * This method will return the players score
+     * @return the score of the player
      */
     public int getPlayerScore(){
         return playerScore;

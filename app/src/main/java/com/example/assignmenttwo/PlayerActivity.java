@@ -47,8 +47,8 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param v
+     * This method submits the playername, playerscore, playerAvatar over to the next activity
+     * @param v, the view that is clicked
      */
     public void onClickSubmit(View v){
         //Gets the player name from the edit text
@@ -64,15 +64,16 @@ public class PlayerActivity extends AppCompatActivity {
             return;
         }
 
+        //Find the radiobutton based on the ID
         RadioButton selected = findViewById(selectedId);
-        int tagIndex = Integer.valueOf(selected.getTag().toString());
 
-        // Use the tag to get the avatar ID from the array
         // Use the tag to get the avatar ID from the array
         avatarID = Integer.valueOf(selected.getTag().toString());
 
+        //Creating a new player
         Player currentPlayer = new Player(this, playerName, avatarID, playerScore);
 
+        //Update the leaderboard with the details from the currentplayer
         leaderboardInstance.updateLeaderboard(currentPlayer);
 
         //Changed to the leaderboard activity when selected

@@ -14,6 +14,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * The gameplay class manages cards and the game details
+ */
 public class GamePlay{
     private int MAX_MATCHES = 6;
     private int totalGuesses;
@@ -27,7 +30,9 @@ public class GamePlay{
     private Context context;
 
     /**
-     * @param context
+     * Constructor the gameplay class
+     * This method will initialize the context for the game
+     * @param context, the current context of the application
      */
     public GamePlay(Context context) {
         this.context = context;
@@ -35,7 +40,6 @@ public class GamePlay{
 
     /**
      * This method sets up the game to be reset everytime it is run
-     *
      */
     public void setUpGame() {
         totalCorrect = 0;
@@ -98,7 +102,6 @@ public class GamePlay{
 
                 }
             });
-
         }
         // Reference the guesses TextView
         textviewGuesses = ((Activity) context).findViewById(R.id.tv_num_guesses);
@@ -156,7 +159,7 @@ public class GamePlay{
     /**
      * Assigns variables to the first and second cards
      * then displays turns them face up
-     * @param card
+     * @param card, the cards that are going to flipped
      */
     public void flipCard(Card card) {
         //If the card is face up, do nothing
@@ -185,10 +188,10 @@ public class GamePlay{
 
     }
 
-
     /**
      * When a card is clicked it will get the tage associated with it,
      * then flip the card
+     * @param view, the card that will be clicked
      */
     public void onclickCard(View view) {
         // Retrieve the Card object based on the tag
@@ -227,7 +230,7 @@ public class GamePlay{
     }
 
     /**
-     * Goes to the player activity page when all matchs are done
+     * Goes to the player activity page when all matches are found
      */
     public void gameOver() {
         Intent intent = new Intent(context, PlayerActivity.class);
