@@ -22,7 +22,7 @@ public class Leaderboard {
     private ArrayList<Player> leaderboard = new ArrayList<>();
 
     /**
-     * This method is the leaderboard constructor that
+     * This method is the leaderboard constructor
      */
     private Leaderboard(){
         //Setting the images to the img_array
@@ -69,7 +69,7 @@ public class Leaderboard {
      * @param context, the current context of the application
      */
     public void displayLeaderboard(Context context){
-        // Getting the player name and linking it to the textviews
+        // Setting the player name textviews in an array for displaying to the context
         TextView[] nameViews = new TextView[]{
                 ((Activity) context).findViewById(R.id.tv_leaderboard_name1),
                 ((Activity) context).findViewById(R.id.tv_leaderboard_name2),
@@ -78,7 +78,7 @@ public class Leaderboard {
                 ((Activity) context).findViewById(R.id.tv_leaderboard_name5)
         };
 
-        // Getting the player avatars and linking them to imageviews
+        // Setting the player avatars imageviews in an array for displaying to the context
         ImageView[] avatarViews = new ImageView[]{
                 ((Activity) context).findViewById(R.id.iv_leaderboard_avatar1),
                 ((Activity) context).findViewById(R.id.iv_leaderboard_avatar2),
@@ -87,7 +87,7 @@ public class Leaderboard {
                 ((Activity) context).findViewById(R.id.iv_leaderboard_avatar5)
         };
 
-        // Getting the player scores and linking them to textviews
+        // Setting the player score textviews in an array for displaying to the context
         TextView[] scoreViews = new TextView[]{
                 ((Activity) context).findViewById(R.id.tv_leaderboard_score1),
                 ((Activity) context).findViewById(R.id.tv_leaderboard_score2),
@@ -97,7 +97,7 @@ public class Leaderboard {
         };
 
         // Loop through and assign the player names, avatars, and scores
-        for (int i = 0; i < leaderboard.size(); i++) {
+        for (int i =     0; i < leaderboard.size(); i++) {
             if(leaderboard.get(i) != null){
                 Player currentPlayer = leaderboard.get(i);
 
